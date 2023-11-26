@@ -9,3 +9,5 @@ add_library(impl2 SHARED impl2.cpp)
 
 add_executable(main main.cpp)
 target_link_libraries(main impl1)
+
+add_executable(runtime runtime.cpp)
