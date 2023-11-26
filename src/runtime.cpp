@@ -106,5 +106,12 @@ auto main() -> int {
                 option = -1;
         }
     }
+
+    dlclose(handle);
+    error = dlerror();
+    if (error) {
+        std::cerr << error << std::endl;
+        return 1;
+    }
     return 0;
 }
