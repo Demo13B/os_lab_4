@@ -15,7 +15,6 @@ auto main() -> int {
         switch (option) {
             case 1:
                 float A, B;
-                std::cout << "Input the length of figure's sides: ";
                 std::cin >> A >> B;
                 std::cout << "The square is: " << square(A, B) << std::endl
                           << "Input instruction: ";
@@ -24,7 +23,6 @@ auto main() -> int {
 
             case 2:
                 long num;
-                std::cout << "Input the decimal number: ";
                 std::cin >> num;
                 std::cout << "The num in other system is: " << translation(num) << std::endl
                           << "Input instruction: ";
