@@ -55,7 +55,7 @@ auto main() -> int {
                         break;
 
                     case 2:
-                        int impl = 1;
+                        impl = 1;
                         handle = dlopen("libimpl1.dylib", RTLD_LAZY);
                         break;
                 }
