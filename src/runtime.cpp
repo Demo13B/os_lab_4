@@ -13,7 +13,7 @@ auto main() -> int {
     std::cin >> option;
 
     int impl = 1;
-    auto handle = dlopen("libimpl1.dylib", RTLD_GLOBAL);
+    auto handle = dlopen("libimpl1.dylib", RTLD_LAZY);
 
     char* error;
     error = dlerror();
@@ -51,12 +51,12 @@ auto main() -> int {
                 switch (impl) {
                     case 1:
                         impl = 2;
-                        handle = dlopen("libimpl2.dylib", RTLD_GLOBAL);
+                        handle = dlopen("libimpl2.dylib", RTLD_LAZY);
                         break;
 
                     case 2:
                         int impl = 1;
-                        handle = dlopen("libimpl1.dylib", RTLD_GLOBAL);
+                        handle = dlopen("libimpl1.dylib", RTLD_LAZY);
                         break;
                 }
 
